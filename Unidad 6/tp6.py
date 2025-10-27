@@ -62,3 +62,60 @@ numero = int(input("Coloque un numero: "))
 tabla = tabla_multiplicar(numero)
 
 print(f"Su numero es {numero} y su tabla de multiplicar de 1 al 10 es: {tabla}.")
+
+#7. Crear una función llamada operaciones_basicas(a, b) que reciba dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
+
+def operaciones_basicas(a, b):
+    suma =a + b
+    resta = a - b
+    multiplicacion = a * b
+    if (b != 0):
+         division = a/b
+    else:
+        division = None
+    return (suma, resta, multiplicacion, division)
+
+a = float(input("Coloque su primer numero: "))
+b = float(input("coloque su segundo numero: "))
+
+suma, resta, multiplicacion, division = operaciones_basicas(a, b)
+
+print(f"Suma: {suma}")
+print(f"Resta: {resta}")
+print(f"Multiplicacion: {multiplicacion}")
+if (division == None):
+    print("No se puede dividir por 0!!")
+else:
+    print(f"Division: {division}") 
+
+#8. Crear una función llamada calcular_imc(peso, altura) que reciba el peso en kilogramos y la altura en metros, y devuelva el índice de masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
+
+def calcular_imc(peso, altura):
+    return peso/(altura**2)
+
+peso = float(input("Coloque su peso en Kilogramos: "))
+altura = float(input("Coloque su altura en metros: "))
+
+imc = calcular_imc(peso, altura)
+print(f"Su Indice de Masa Corporal es de: {imc}")
+
+#9. Crear una función llamada celsius_a_fahrenheit(celsius) que reciba una temperatura en grados Celsius y devuelva su equivalente en Fahrenheit. Pedir al usuario la temperatura en Celsius y mostrar el resultado usando la función.
+
+def celsius_a_fahrenheit(celsius):
+    return (celsius*1.8) + 32
+
+celsius = float(input("Coloque la Temperatura en grados Celsius: "))
+resultado = celsius_a_fahrenheit(celsius)
+print(f"Su Temperatura en Fahrenheit es: {resultado}")
+
+#10.Crear una función llamada calcular_promedio(a, b, c) que reciba tres números como parámetros y devuelva el promedio de ellos. Solicitar los números al usuario y mostrar el resultado usando esta función.
+
+def calcular_promedio(a, b, c):
+    return (a + b + c)/3
+
+a = float(input("Coloque su primer numero: "))
+b = float(input("Coloque su segundo numero: "))
+c = float(input("Coloque su tercer numero: "))
+
+promedio = calcular_promedio(a, b, c)
+print(f"El promedio de sus tres numeros es: {promedio}")
