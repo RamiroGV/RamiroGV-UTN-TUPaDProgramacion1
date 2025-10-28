@@ -21,4 +21,22 @@ print(precios_fruta)
 for clave, valor in precios_fruta.items():
     print(f"{clave}")
 
+#4) Escribí un programa que permita almacenar y consultar números telefónicos. • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor. • Luego, pedí un nombre y mostrale el número asociado, si existe.
+
+contador = 0
+
+contactos = {}
+
+for i in range(2):
+    nombre = input("Coloque el nombre de la persona: ")
+    numero = input("Coloque el numero de la persona: ")
+    contactos[nombre] = numero
+
+consultar = input("Coloque el nombre dela persona que quiere buscar: ")
+
+if consultar in contactos:
+    print(f"El numero de {consultar} es: {contactos[consultar]}")
+else:
+    print("Ese contacto no existe!!")
+
 #
