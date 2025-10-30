@@ -120,4 +120,14 @@ if clave in agenda:
 else:
     print("En ese dia y horario no tienes ningun evento.")
 
-#
+#10) Dado un diccionario que mapea nombres de países con sus capitales, construí un nuevo diccionario donde: • Las capitales sean las claves. • Los países sean los valores.
+
+diccionario = {"Argentina": "Buenos Aires",
+               "Chile": "Santiago ",
+               "Colombia": "Bogotá",
+               "Brasil": "Brasilia",
+               "Paraguay": "Asunción"}
+
+diccionario_alrevez = {valor: clave for clave, valor in diccionario.items()}
+
+print(diccionario_alrevez)
