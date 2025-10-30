@@ -27,7 +27,7 @@ contador = 0
 
 contactos = {}
 
-for i in range(2):
+for i in range(5):
     nombre = input("Coloque el nombre de la persona: ")
     numero = input("Coloque el numero de la persona: ")
     contactos[nombre] = numero
@@ -39,4 +39,5 @@ if consultar in contactos:
 else:
     print("Ese contacto no existe!!")
 
-#
+#5)Solicita al usuario una frase e imprime: • Las palabras únicas (usando un set). • Un diccionario con la cantidad de veces que aparece cada palabra.
+
