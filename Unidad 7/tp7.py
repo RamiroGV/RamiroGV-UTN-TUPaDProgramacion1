@@ -24,7 +24,6 @@ for clave, valor in precios_fruta.items():
 #4) Escribí un programa que permita almacenar y consultar números telefónicos. • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor. • Luego, pedí un nombre y mostrale el número asociado, si existe.
 
 contador = 0
-
 contactos = {}
 
 for i in range(5):
@@ -32,7 +31,7 @@ for i in range(5):
     numero = input("Coloque el numero de la persona: ")
     contactos[nombre] = numero
 
-consultar = input("Coloque el nombre dela persona que quiere buscar: ")
+consultar = input("Coloque el nombre de la persona que quiere buscar: ")
 
 if consultar in contactos:
     print(f"El numero de {consultar} es: {contactos[consultar]}")
@@ -41,3 +40,23 @@ else:
 
 #5)Solicita al usuario una frase e imprime: • Las palabras únicas (usando un set). • Un diccionario con la cantidad de veces que aparece cada palabra.
 
+frase = input("Ingresá una frase: ")
+
+palabras = frase.split()
+
+palabras_unicas = set(palabras)
+print("Palabras únicas:")
+print(palabras_unicas)
+
+contador = {}
+
+for palabra in palabras:
+    if palabra in contador:
+        contador[palabra] += 1
+    else:
+        contador[palabra] = 1
+
+print("Cantidad de veces que aparece cada palabra:")
+print(contador)
+
+#
