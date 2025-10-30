@@ -23,7 +23,6 @@ for clave, valor in precios_fruta.items():
 
 #4) Escribí un programa que permita almacenar y consultar números telefónicos. • Permití al usuario cargar 5 contactos con su nombre como clave y número como valor. • Luego, pedí un nombre y mostrale el número asociado, si existe.
 
-contador = 0
 contactos = {}
 
 for i in range(5):
@@ -58,5 +57,67 @@ for palabra in palabras:
 
 print("Cantidad de veces que aparece cada palabra:")
 print(contador)
+
+#6) Permití ingresar los nombres de 3 alumnos, y para cada uno una tupla de 3 notas. Luego, mostrá el promedio de cada alumno.
+
+alumnos = {}
+
+for i in range(1):
+    nombre = input("Nombre del alumno: ")
+    nota1 = float(input("Coloque la primera nota: "))
+    nota2 = float(input("Coloque la segunda nota: "))
+    nota3 = float(input("Coloque la tercera nota: "))
+    alumnos[nombre] = (nota1, nota2, nota3)
+
+for nombre, notas in alumnos.items():
+    promedio = sum(notas) / 3
+    print(f"{nombre} su promedio es: {promedio}")
+
+#7) Dado dos sets de números, representando dos listas de estudiantes que aprobaron Parcial 1 y Parcial 2: • Mostrá los que aprobaron ambos parciales. • Mostrá los que aprobaron solo uno de los dos. • Mostrá la lista total de estudiantes que aprobaron al menos un parcial (sin repetir).
+
+
+
+#8) Armá un diccionario donde las claves sean nombres de productos y los valores su stock. Permití al usuario: • Consultar el stock de un producto ingresado. • Agregar unidades al stock si el producto ya existe. • Agregar un nuevo producto si no existe.
+
+productos = {"Nafta Comun" : 12000, "Nafta Premium" : 15000, "Diesel Comun" : 8000, "Diesel Premium" : 23000}
+
+print(productos.get(input("Coloque el producto que quiere revisar: ")))
+
+modificar = input("¿Que producto quiere modificar(Nafta Comun, Nafta Premium, Diesel Comun o Diesel Premium)?")
+
+if modificar in productos:
+    nuevo_valor = input(f"Coloque el nuevo valor de {modificar}: ")
+    productos[modificar] = nuevo_valor
+    print("Modificacion exitosa!!!")
+else:
+    print("No existe ese producto.")
+
+agregar = input("Coloque el nombre del producto que quiere agregar: ")
+cantidad = input("Coloque la cantidad del producto: ")
+
+productos[agregar] = cantidad
+
+print("Producto nuevo agregado!!")
+
+#9) Creá una agenda donde las claves sean tuplas de (día, hora) y los valores sean eventos. Permití consultar qué actividad hay en cierto día y hora.
+
+agenda = {
+    ("Lunes", "07:00"): "Gimnasio",
+    ("Lunes", "08:30"): "Reunion",
+    ("Martes", "10:00"): "Dentista",
+    ("Miercoles", "16:00"): "Entrenamiento",
+    ("Jueves", "20:00"): "Cena con amigos",
+    ("Viernes", "21:00"): "Cine",
+}
+
+dia = input("Coloque el dia: ")
+hora = input("Coloque el horario: ")
+
+clave = (dia, hora)
+
+if clave in agenda:
+    print(agenda[clave])
+else:
+    print("En ese dia y horario no tienes ningun evento.")
 
 #
