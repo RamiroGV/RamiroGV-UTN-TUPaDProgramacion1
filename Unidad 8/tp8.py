@@ -52,4 +52,4 @@ if not encontrado:
 
 with open("productos.txt", "w") as archivo:
     for prod in productos:
-        archivo.write(f"{prod['nombre']},{prod['precio']},{prod['cantidad']}\n")
+        archivo.write(f"{prod['nombre']},{prod['precio']},{prod['cantidad']}\n") 
