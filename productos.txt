@@ -1,0 +1,4 @@
+Nombre,Precio,Cantidad
+Producto: Leche,Precio $1200,Cantidad: 3
+Producto: Yerba,Precio $1900,Cantidad: 5
+Producto: Manteca,Precio $800,Cantidad: 8
